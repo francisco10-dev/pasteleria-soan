@@ -1,0 +1,227 @@
+/* =============================================
+   ABOUT / HISTORIA SECTION
+   ============================================= */
+
+.about {
+  padding: var(--space-4xl) 0;
+  background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-pink-mid), transparent);
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+/* Illustration side */
+.about__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__logo-display {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__logo-ring {
+  width: clamp(260px, 70vw, 340px);
+  height: clamp(260px, 70vw, 340px);
+  border-radius: 50%;
+  background: var(--gradient-hero);
+  border: 3px solid var(--color-pink-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.about__logo-ring::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 2px dashed var(--color-pink-mid);
+  animation: spin-slow 20s linear infinite;
+}
+
+.about__logo-emoji {
+  font-size: 6rem;
+  animation: float 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.about__badge-est {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  background: var(--gradient-btn);
+  color: var(--color-white);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 800;
+  box-shadow: var(--shadow-btn);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.about__badge-phone {
+  position: absolute;
+  bottom: 20px;
+  left: -10px;
+  background: var(--color-white);
+  border: 2px solid var(--color-pink-light);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Content side */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.about__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__title {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.about__title span {
+  background: var(--gradient-btn);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about__story {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__paragraph {
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* Values cards */
+.about__values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.about__value-card {
+  background: var(--gradient-hero);
+  border: 1.5px solid var(--color-pink-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about__value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.about__value-icon {
+  font-size: 1.75rem;
+}
+
+.about__value-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.about__value-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* CTA */
+.about__cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+  background: var(--gradient-hero);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-pink-light);
+  text-align: center;
+  align-items: center;
+}
+
+.about__cta-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.about__cta-sub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  .about__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-4xl);
+  }
+
+  .about__visual {
+    flex-shrink: 0;
+    order: 2;
+  }
+
+  .about__content {
+    flex: 1;
+    order: 1;
+  }
+}

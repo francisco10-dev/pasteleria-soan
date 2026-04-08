@@ -1,0 +1,244 @@
+/* =============================================
+   GLOBAL STYLES – Pastelería Soan
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+/* === CSS VARIABLES === */
+:root {
+  /* Brand Colors */
+  --color-pink-light: #fce4ec;
+  --color-pink-base: #f8bbd0;
+  --color-pink-mid: #f48fb1;
+  --color-pink-dark: #e8637a;
+  --color-pink-deep: #c2185b;
+  --color-rose: #d81b60;
+
+  --color-cream: #fff8f0;
+  --color-cream-warm: #ffecd2;
+  --color-yellow-soft: #fff176;
+  --color-yellow: #ffd54f;
+  --color-yellow-deep: #f9a825;
+
+  --color-white: #ffffff;
+  --color-text: #3d1a26;
+  --color-text-soft: #7a3f55;
+  --color-text-muted: #b07a8e;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(145deg, #fce4ec 0%, #fff8f0 50%, #fce4ec 100%);
+  --gradient-section: linear-gradient(180deg, #fff8f0 0%, #fce4ec 100%);
+  --gradient-card: linear-gradient(135deg, #ffffff 0%, #fef9fb 100%);
+  --gradient-btn: linear-gradient(135deg, #e8637a 0%, #c2185b 100%);
+  --gradient-btn-hover: linear-gradient(135deg, #c2185b 0%, #ad1457 100%);
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(232, 99, 122, 0.12);
+  --shadow-card: 0 8px 32px rgba(194, 24, 91, 0.1);
+  --shadow-card-hover: 0 16px 48px rgba(194, 24, 91, 0.2);
+  --shadow-btn: 0 4px 16px rgba(232, 99, 122, 0.4);
+  --shadow-btn-hover: 0 8px 24px rgba(194, 24, 91, 0.5);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-primary: 'Maven Pro', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Layout */
+  --container-max: 1200px;
+  --nav-height: 64px;
+}
+
+/* === RESET === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-primary);
+}
+
+/* === UTILITIES === */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--color-pink-light);
+  color: var(--color-pink-deep);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-pink-mid);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-soft);
+  font-weight: 500;
+  max-width: 560px;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-pink-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-pink-dark);
+  border-radius: var(--radius-full);
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(232, 99, 122, 0.4); }
+  70% { box-shadow: 0 0 0 16px rgba(232, 99, 122, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 99, 122, 0); }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.animate-float {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+/* Mobile first: base styles are mobile */
+/* sm: 480px, md: 768px, lg: 1024px, xl: 1280px */
+
+@media (min-width: 480px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  .container {
+    padding: 0 var(--space-xl);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --nav-height: 76px;
+  }
+}
