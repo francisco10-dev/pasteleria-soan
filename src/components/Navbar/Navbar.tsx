@@ -62,7 +62,7 @@ export default function Navbar() {
           </ul>
 
           <a
-            href="https://wa.me/50684160236"
+            href="https://wa.me/50662899719"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar__cta"
