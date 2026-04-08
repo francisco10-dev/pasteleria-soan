@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="hero__content">
           <div className="hero__badge">
             <CiLocationOn size={20}  />
-            <span>Santa Cruz, Guanacaste</span>
+            <span>Pastelería en Santa Cruz, Guanacaste</span>
           </div>
 
           <h1 className="hero__title">
