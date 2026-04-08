@@ -6,7 +6,6 @@ import { FaWhatsapp } from 'react-icons/fa6';
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Sobre nosotros', href: '#historia' },
-  { label: 'Especialidades', href: '#especialidades' },
   { label: 'Pedidos', href: '#pedidos' },
   { label: 'Contacto', href: '#contacto' },
 ];
