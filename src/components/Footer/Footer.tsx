@@ -58,7 +58,7 @@ export default function Footer() {
                 <FaInstagram size={20} />
               </a>
               <a
-                href="https://wa.me/50684160236"
+                href="https://wa.me/50662899719?text=Hola%20Pastelería%20Soan!%20Quisiera%20hacer%20un%20pedido%20🎂"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer__social-link"
@@ -67,7 +67,7 @@ export default function Footer() {
                <FaWhatsapp size={20} />
               </a>
               <a
-                href="tel:+50684160236"
+                href="tel:+50662899719"
                 className="footer__social-link"
                 aria-label="Teléfono"
               >
@@ -100,14 +100,14 @@ export default function Footer() {
             <div className="footer__links">
               <div className="footer__contact-item">
                 <IoCallOutline size={20} />
-                <a href="tel:+50684160236" className="footer__link" style={{ padding: 0 }}>
-                  +506 8416-0236
+                <a href="tel:+50662899719" className="footer__link" style={{ padding: 0 }}>
+                  +506 6289-9719
                 </a>
               </div>
               <div className="footer__contact-item">
                 <FaWhatsapp size={20} />
                 <a
-                  href="https://wa.me/50684160236"
+                  href="https://wa.me/50662899719?text=Hola%20Pastelería%20Soan!%20Quisiera%20hacer%20un%20pedido%20"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer__link"

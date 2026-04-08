@@ -38,7 +38,7 @@ export default function About() {
               Desde<br />2026
             </div>
             <div className="about__badge-phone">
-              📞 8416-0236
+              📞 +506 6289-9719
             </div>
           </div>
         </div>
