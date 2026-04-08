@@ -59,7 +59,7 @@ export default function Hero() {
 
           <div className="hero__actions">
             <a
-              href="https://wa.me/50684160236?text=Hola%20Pastelería%20Soan%2C%20me%20gustaría%20hacer%20un%20pedido%20🎂"
+              href="https://wa.me/50662899719?text=Hola%20Pastelería%20Soan%2C%20me%20gustaría%20hacer%20un%20pedido%20🎂"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn--primary"
